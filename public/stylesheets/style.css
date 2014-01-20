@@ -70,8 +70,34 @@ a:link, a:visited, a:hover, a:active {
 
 .text-field {
 	text-align: center;
-	color: #aeb3c5;
+	color: #6a7495;
 	font-size: 0.8em;
 	font-family: "Helvetica Neue";
 	width: 200px;
+}
+
+.movie-results {
+	border: solid black;
+	margin: 25px;
+	text-align: center;
+	font-size: 2em;
+	list-style-type: none;
+	background-color: #c3c7d4;
+}
+
+.movie-results a {
+	text-align: center;
+}
+
+.mov-poster {
+	border: solid black;
+	position: center;
+}
+
+.details {
+	text-align: center;
+}
+
+.details-page {
+
 }

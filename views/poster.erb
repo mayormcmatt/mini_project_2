@@ -1,12 +1,12 @@
 
-<body>
-<h1><%="<img src=#{@poster["Poster"]}>"%></h1>
-<p><%="Year Released: #{@poster["Year"]}"%></p>
-<p><%="Runtime: #{@poster["Runtime"]}"%></p>
-<p><%="Genre: #{@poster["Genre"]}"%></p>
-<p><%="Director: #{@poster["Director"]}"%></p>
-<p><%="Cast: #{@poster["Actors"]}"%></p>
-<p><%="Rating: #{@poster["Rated"]}"%></p>
-<p><%="Synopsis: #{@poster["Plot"]}"%></p>
-<p><a href="http://www.imdb.com/title/<%= "#{@poster["imdbID"]}" %>">IMDB Page</a></p>
+<body class="details-page">
+	<h1 class="mov-poster"><%="<img src=#{@poster["Poster"]}>"%></h1>
+	<p class="details"><%="Year Released: #{@poster["Year"]}"%></p>
+	<p class="details"><%="Runtime: #{@poster["Runtime"]}"%></p>
+	<p class="details"><%="Genre: #{@poster["Genre"]}"%></p>
+	<p class="details"><%="Director: #{@poster["Director"]}"%></p>
+	<p class="details"><%="Cast: #{@poster["Actors"]}"%></p>
+	<p class="details"><%="Rating: #{@poster["Rated"]}"%></p>
+	<p class="details"><%="Synopsis: #{@poster["Plot"]}"%></p>
+	<p class="details"><a href="http://www.imdb.com/title/<%= "#{@poster["imdbID"]}" %>">IMDB Page</a></p>
 </body>
