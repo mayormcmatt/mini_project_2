@@ -18,10 +18,12 @@ post '/result' do
 	erb :show
 end
 
-get '/poster/:imdb' do |imdb_id|
+get '/poster/:imdb' do
+	imdb_id = params["imdb"]
 	# Make another api call here to get the url of the poster.
 	response = Typhoeus.get("www.omdbapi.com", :params => {:i => "#{imdb_id}"})
-	# # Make a request to the omdb api here!
-	search_str = JSON.parse(response.body)
+	# Make a request to the omdb api here!
+	@poster = JSON.parse(response.body)
+	erb :poster
 end
 

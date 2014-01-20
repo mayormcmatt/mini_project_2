@@ -1,9 +1,9 @@
 
-	<ul>
+<ul>
 
-	<% @parsed["Search"].map do |movie| %>
-	<li> <%="#{movie["Title"]}" %></li>
-	<% end %>
+<% @parsed["Search"].map do |movie| %>
+<li><%="<a href=/poster/#{movie["imdbID"]}>#{movie["Title"]} (#{movie["Year"]})" %></li>
+<% end %>
 
+</ul>
 
-	</ul>

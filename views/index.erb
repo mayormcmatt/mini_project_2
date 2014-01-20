@@ -1,8 +1,77 @@
-<div class="container">
-	<h1>Find a Movie!</h1>
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+
+	<div class="container">
+		<div class="navbar">
+			<header>
+				<ul class="nav navbar-nav">
+					<li class="imdb"><a href="http://www.imdb.com/">IMDb</a></li>
+					<li class="rotten"><a href="https://www.rottentomatoes.com/">Rotten Tomatoes</a></li>
+					<li class="screen"><a href="http://www.screenjunkies.com/">Screen Junkies</a></li>
+					<li class="fandango"><a href="http://www.fandango.com/">Fandango</a></li>
+				</ul>
+			</header>
+		</div>
+
+		<div><h1 class="title"><a href="/">That's Moviewang!</a></h1></div>
+
+		<div><h2 class="subtitle">The Movie Search Sensation Sweeping the Nation!</h2></div>
+
+		<div id="movie-carousel" class="carousel slide">
+			<ol class="carousel-indicators">
+				<li data-target="#movie-carousel" data-slide-to="0" class="active"></li>
+				<li data-target="#movie-carousel" data-slide-to="1"></li>
+				<li data-target="#movie-carousel" data-slide-to="2"></li>
+				<li data-target="#movie-carousel" data-slide-to="3"></li>
+				<li data-target="#movie-carousel" data-slide-to="4"></li>
+			</ol>
+
+			<div class="carousel-inner">
+				<div class="item active">
+					<img src="http://www.lorempixel.com/1600/500/cats" alt="Image">
+					<div class="carousel-caption">caption 1</div>
+				</div>
+				<div class="item">
+					<img src="http://www.lorempixel.com/1600/500/food" alt="Image">
+					<div class="carousel-caption">caption 2</div>
+				</div>
+				<div class="item">
+					<img src="http://www.lorempixel.com/1600/500/technics" alt="Image">
+					<div class="carousel-caption">caption 3</div>
+				</div>
+				<div class="item">
+					<img src="http://www.lorempixel.com/1600/500/city" alt="Image">
+					<div class="carousel-caption"></div>
+				</div>
+				<div class="item">
+					<img src="http://www.lorempixel.com/1600/500/transport" alt="Image">
+					<div class="carousel-caption"></div>
+				</div>
+			</div>
+			<a class="left carousel-control" href="#movie-carousel" data-slide="prev">
+			<span class="icon-prev"></span>
+			</a>
+			<a class="right carousel-control" href="#movie-carousel" data-slide="next">
+			 <span class="icon-next"></span>
+			</a>
+		</div>
+
+		<!--Javascript-->
+		<script src="http://code.jquery.com/jquery.js"></script>
+		<script src="js/bootstrap.js"></script>
+		<script>$('.carousel').carousel()</script>
+
+		<div class="search-form">
 		<form accept-charset="UTF-8" action="/result" method="POST">
-			<label for="movie">Search for:</label>
-			<input id="movie" name="movie" type="text"/>
-			<input name="commit" type="submit" value="Search"/> 
-    		</form>
-</div>
+			<label for="movie">Search for:</label> <!--label to the left of search text field-->
+			<input class="text-field" id="movie" name="movie" onFocus="this.value=''" type="text" value="Press 'Enter' to Search"/>
+			<input name="commit" type="submit" value="Search" style="position: absolute; left: -9999px"/> <!--'value' labels the button-->
+		</form>
+		</div>	
+	</div>
+
+</body>
+
+</html>
